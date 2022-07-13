@@ -25,7 +25,7 @@ function formOptionsAutoUpate() {
    console.log(items[i].getTitle() + ' - ' + items[i].getId())
    }
 
-  //Declare question id list 
+  //Declare question id object
   var question_ID = [
     {name: "name", id: your-question-id},
      name: "name", id: your-question-id},
