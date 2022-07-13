@@ -111,7 +111,7 @@ function allResponsesToSheet(){
     answers.push(Object.values(answer));
   })
   
-  FinalSheet.getRange(ss.getLastRow()+1,1,answers.length,answers[0].length).setValues(answers);
+  FinalSheet.getRange(FinalSheet.getLastRow()+1,1,answers.length,answers[0].length).setValues(answers);
 
   //Clear form responses
   var del_form = FormApp.openById('your-form-id'); 
