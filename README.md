@@ -13,6 +13,7 @@
 4.當有人提交表單時利用lineNotify通知
 
 1.
+```js
 function formOptionsAutoUpate() {
   //Open form by id
   var form = FormApp.openById('your-form-id');
@@ -48,7 +49,7 @@ function formOptionsAutoUpate() {
     question.asMultipleChoiceItem().setChoiceValues(test);
   };
 }
-
+```
 2.
 function responsesToSheet(e){
   var form = FormApp.getActiveForm();
