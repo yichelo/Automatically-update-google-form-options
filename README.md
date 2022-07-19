@@ -20,6 +20,8 @@
   //Open spreadsheet by id
   var ss = SpreadsheetApp.openById('your-spreadsheet-id');
 ```
+* 表單的每一個區段都有一個ID，因此我們需要找出我們要更動的區段的ID。
+
 ```js
   //Find question ID
    var items = form.getItems();
@@ -27,6 +29,8 @@
    console.log(items[i].getTitle() + ' - ' + items[i].getId())
    }
 ```
+* 將ID加入key值name做成一個js object。
+
 ```js
   //Declare question id object
   var question_ID = [
@@ -35,6 +39,7 @@
      name: "name", id: your-question-id}
     ];
 ```
+* 
 ```js
   for (var i = 0; i < question_ID.length; i++) {
     //Get question by id
