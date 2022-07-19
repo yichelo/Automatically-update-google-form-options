@@ -28,8 +28,8 @@ var question_ID = [
   ];
 ```
 * 用每個區段ID的key值name在試算表中建立工作表，並以該工作表第一欄第二列(A2)開始抓Value(A2.A3.A4...)到最末列。  
-  抓完所有Value之後清除空值並以字首排序。  
-  最後將Value轉為選項後放入表單。  
+* 抓完所有Value之後清除空值並以字首排序。  
+* 最後將Value轉為選項後放入表單。  
 ```js
 //Get question by id
 var question = form.getItemById('your-question-id');
