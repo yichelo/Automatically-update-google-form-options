@@ -1,38 +1,39 @@
 # Automatically-update-google-form-options
 
-語言：google apps script
+## 語言：google apps script
 
 功能：
 
-1.利用google試算表自動更新google表單選項
+二、不透過表單連結功能將表單回應依序即時更新至指定試算表
 
-2.不透過表單連結功能將表單回應依序即時更新至指定試算表
+三、定期封存表單回應至指定試算表
 
-3.定期封存表單回應至指定試算表
+四、當有人提交表單時利用lineNotify通知
 
-4.當有人提交表單時利用lineNotify通知
+## 一、利用google試算表自動更新google表單選項
 
-1.
 ```js
-function formOptionsAutoUpate() {
   //Open form by id
   var form = FormApp.openById('your-form-id');
-  var items = form.getItems();
   //Open spreadsheet by id
   var ss = SpreadsheetApp.openById('your-spreadsheet-id');
-
+```
+```js
   //Find question ID
+   var items = form.getItems();
    for(var i in items) {
    console.log(items[i].getTitle() + ' - ' + items[i].getId())
    }
-
+```
+```js
   //Declare question id object
   var question_ID = [
     {name: "name", id: your-question-id},
      name: "name", id: your-question-id},
      name: "name", id: your-question-id}
     ];
-
+```
+```js
   for (var i = 0; i < question_ID.length; i++) {
     //Get question by id
     var question = form.getItemById(question_ID[i].id);
