@@ -12,6 +12,8 @@
 
 ## 一、利用google試算表自動更新google表單選項
 
+利用表單及試算表的ID來開啟指定的表單及試算表。
+
 ```js
   //Open form by id
   var form = FormApp.openById('your-form-id');
