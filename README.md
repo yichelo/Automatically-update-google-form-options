@@ -135,7 +135,7 @@ var del_form = FormApp.openById('your-form-id');
 del_form.deleteAllResponses();
 ```
 ## 四、當有人提交表單時利用lineNotify通知
-**※這個function需要放在表單生成的apps script專案內。**
+**※這個function需要放在表單生成的apps script專案內。**  
 **※這個function需要設定觸發條件在提交表單時觸發。**
 * 抓取提交表單的回應並加入時間標記並放入變數message中。
 ```js
