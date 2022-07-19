@@ -51,6 +51,7 @@ function formOptionsAutoUpate() {
 }
 ```
 2.
+```js
 function responsesToSheet(e){
   var form = FormApp.getActiveForm();
   var currentItemResponses = e.response.getItemResponses();
@@ -62,9 +63,10 @@ function responsesToSheet(e){
   const ss = SpreadsheetApp.openById("your-spreadsheet-id");
   ss.getSheetByName('your-sheet-name').getRange(ss.getSheetByName('your-sheet-name').getLastRow()+1,1,1,answer[0].length).setValues(answer);
 }
-
+```
 3.
 版本1:
+```js
 function archiveSpreadsheetToFolder() {
   // Create a new blank file and name it by current time
   var timezone = SpreadsheetApp.getActive().getSpreadsheetTimeZone();
@@ -93,8 +95,9 @@ function archiveSpreadsheetToFolder() {
   var form = FormApp.openById('your-form-id'); 
   form.deleteAllResponses();
 }
-
+```
 版本2:
+```js
 function allResponsesToSheet(){
   const form = FormApp.getActiveForm();
   const formResponses = form.getResponses();
@@ -118,8 +121,9 @@ function allResponsesToSheet(){
   var del_form = FormApp.openById('your-form-id'); 
   del_form.deleteAllResponses();
 }
-
+```
 4.
+```js
 function notifyPos(e) {
   var form = FormApp.getActiveForm();
   var currentItemResponses = e.response.getItemResponses();
@@ -146,3 +150,4 @@ function sendMessage(message) {
   };
   UrlFetchApp.fetch('https://notify-api.line.me/api/notify', option);
 }
+```
